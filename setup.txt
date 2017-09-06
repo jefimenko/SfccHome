@@ -1,29 +1,58 @@
 [Create a gmail account]
-Acquire permissions for the project.
+Acquire permissions for the project for the created gmail account,
+or for an already existing account.
 
 
 
 [glcoud]
 Download and install Google Cloud Platform SDK (gcloud CLI tool).
 
-https://cloud.google.com/sdk/
+`https://cloud.google.com/sdk/`
 
 Configure the CLI tool to use a gmail account of your choice.
+Run:
+
+`gcloud init`
+
+to login, then run
+
+`gcloud auth application-default login`
+
+to set default permissions to the appropriate account (the same account assigned
+permissions under [Create a gmail account])
+
+
+[cloud_sql_proxy]
+Download and make executable the cloud_sql_proxy CLI tool with:
+
+`wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy`
+`chmod +x cloud_sql_proxy`
 
 
 
 [Code]
 Python 2.7.X
 
-Use git, clone the repository from:
+Use git, clone the repository with:
 
-https://github.com/jefimenko/SfccHome.git
+`git clone https://github.com/jefimenko/SfccHome.git <optional destination dir>`
 
 
 Install dependencies with:
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 
 requirements-vendor.txt is for dependencies to install locally to ship
 to Google App Engine Standard.
+
+
+
+[dev locally]
+Start cloud_sql_proxy with:
+
+`./cloud_sql_proxy -instances=iconic-flare-179022:us-central1:sfcc-home-mysql=tcp:3306`
+
+then start the Django local development server with:
+
+`python manage.py runserver`
