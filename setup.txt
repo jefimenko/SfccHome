@@ -1,0 +1,29 @@
+[Create a gmail account]
+Acquire permissions for the project.
+
+
+
+[glcoud]
+Download and install Google Cloud Platform SDK (gcloud CLI tool).
+
+https://cloud.google.com/sdk/
+
+Configure the CLI tool to use a gmail account of your choice.
+
+
+
+[Code]
+Python 2.7.X
+
+Use git, clone the repository from:
+
+https://github.com/jefimenko/SfccHome.git
+
+
+Install dependencies with:
+
+pip install -r requirements.txt
+
+
+requirements-vendor.txt is for dependencies to install locally to ship
+to Google App Engine Standard.
