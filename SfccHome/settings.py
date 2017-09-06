@@ -146,6 +146,7 @@ else:
     STATIC_URL = 'http://storage.googleapis.com/sfcc-home-static/'
 
 STATICFILES_DIRS = [
+    ('Landing', os.path.join(BASE_DIR, 'Landing', 'static')),
 ]
 
 STATIC_ROOT = 'static'
