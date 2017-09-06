@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
-import settings_secrets
+import SfccHome.settings_secrets
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = settings_secrets.SECRET_KEY
+SECRET_KEY = SfccHome.settings_secrets.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', False)
@@ -78,8 +78,12 @@ WSGI_APPLICATION = 'SfccHome.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': SfccHome.settings_secrets.PGSQL_DB_NAME,
+        'USER': SfccHome.settings_secrets.PGSQL_USER,
+        'PASSWORD': SfccHome.settings_secrets.PGSQL_PASSWORD,
+        'HOST': SfccHome.settings_secrets.PGSQL_HOST,
+        'PORT': SfccHome.settings_secrets.PGSQL_PORT,
     }
 }
 
