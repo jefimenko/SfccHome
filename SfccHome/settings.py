@@ -95,7 +95,7 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'HOST': '104.154.94.206',
+            'HOST': '127.0.0.1',
             'PORT': '3306',
             'NAME': SfccHome.settings_secrets.DB_NAME,
             'USER': SfccHome.settings_secrets.DB_USER,
