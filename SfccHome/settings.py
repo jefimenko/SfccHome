@@ -123,7 +123,7 @@ USE_TZ = True
 if DEBUG:
     STATIC_URL = '/static/'
 else:
-    STATIC_URL = 'http://storage.googleapis.com/sfcc-home/static/'
+    STATIC_URL = 'http://storage.googleapis.com/sfcc-home-static/'
 
 STATICFILES_DIRS = [
 ]
