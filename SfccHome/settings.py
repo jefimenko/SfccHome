@@ -28,7 +28,7 @@ SECRET_KEY = SfccHome.settings_secrets.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -76,16 +76,27 @@ WSGI_APPLICATION = 'SfccHome.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': SfccHome.settings_secrets.PGSQL_DB_NAME,
-        'USER': SfccHome.settings_secrets.PGSQL_USER,
-        'PASSWORD': SfccHome.settings_secrets.PGSQL_PASSWORD,
-        'HOST': SfccHome.settings_secrets.PGSQL_HOST,
-        'PORT': SfccHome.settings_secrets.PGSQL_PORT,
+if os.getenv('SERVER_SOFTWARE', '').startswith('Google App Engine'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': '/cloudsql/iconic-flare-179022:us-central1:sfcc-home-mysql',
+            'NAME': SfccHome.settings_secrets.DB_NAME,
+            'USER': SfccHome.settings_secrets.DB_USER,
+            'PASSWORD': SfccHome.settings_secrets.DB_PASSWORD,
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': '104.154.94.206',
+            'PORT': '3306',
+            'NAME': SfccHome.settings_secrets.DB_NAME,
+            'USER': SfccHome.settings_secrets.DB_USER,
+            'PASSWORD': SfccHome.settings_secrets.DB_PASSWORD,
+        }
+    }
 
 
 # Password validation
@@ -132,4 +143,4 @@ else:
 STATICFILES_DIRS = [
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = 'static'
