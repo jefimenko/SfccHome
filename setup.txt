@@ -1,4 +1,4 @@
-[Create a gmail account]
+[create a gmail account]
 Acquire permissions for the project for the created gmail account,
 or for an already existing account.
 
@@ -30,7 +30,7 @@ Download and make executable the cloud_sql_proxy CLI tool with:
 
 
 
-[Code]
+[get code]
 Python 2.7.X
 
 Use git, clone the repository with:
