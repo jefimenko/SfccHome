@@ -15,7 +15,7 @@ then
 fi
 
 python manage.py collectstatic
-gsutil -m rsync -r  gs://sfcc-home-static
+gsutil -m rsync -r  static_root gs://sfcc-home-static
 
 if [[ $1 == 'l' ]]
 then
