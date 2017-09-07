@@ -1,0 +1,11 @@
+#main-content {
+  grid-area: main-content;
+
+  width: 80%;
+  height: calc(100% - 40px);
+
+  margin: 0;
+  padding: 20px 10%;
+
+  background-color: #CCC;
+}

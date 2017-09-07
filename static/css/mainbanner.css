@@ -1,0 +1,14 @@
+#main-banner {
+  grid-area: main-banner;
+
+  background-image: url(/static/images/mainbanner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#sfcc-logo {
+  margin: 75px 0 0 75px;
+
+  width: 100px;
+  height: 100px;
+}
