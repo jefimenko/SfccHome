@@ -1,7 +1,6 @@
 #main-banner {
   grid-area: main-banner;
 
-  background-image: url(/static/images/mainbanner.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }

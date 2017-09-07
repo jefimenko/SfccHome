@@ -2,7 +2,7 @@
   grid-area: nav-bar;
 
   display: grid;
-  grid-template-columns: 1fr minmax(900px, 8fr) 1fr;
+  grid-template-columns: 1.5fr minmax(900px, 7fr) 1.5fr;
   grid-template-areas:
     "white-space nav-menu lang-toggle";
 
@@ -31,6 +31,14 @@
 
 .nav-bar-blocks:last-child {
   border-right: 1px solid #555;
+}
+
+.nav-sub-menus {
+  display: hidden;
+}
+
+.nav-sub-menu-items {
+
 }
 
 #language-toggle-links {

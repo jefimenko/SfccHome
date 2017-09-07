@@ -140,7 +140,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-STATIC_URL = '/static/'
+if DEBUG:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = 'https://storage.googleapis.com/sfcc-home-static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
@@ -148,4 +151,4 @@ STATICFILES_DIRS = [
     ('Landing', os.path.join(BASE_DIR, 'Landing', 'static')),
 ]
 
-STATIC_ROOT = '/var/www/sfcc/home/static'
+STATIC_ROOT = 'static_root'
