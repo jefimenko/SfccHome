@@ -15,7 +15,7 @@ then
 fi
 
 python manage.py collectstatic
-gsutil -m rsync -r  static_root gs://sfcc-home-static
+gsutil -m -h "Cache-Control:private" rsync -r  static_root gs://sfcc-home-static
 
 if [[ $1 == 'l' ]]
 then
