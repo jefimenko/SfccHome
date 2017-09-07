@@ -1,17 +1,24 @@
-#body-grid {
+body {
+  margin: 0;
+  padding: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+#main-grid {
   display: grid;
 
   margin: 0;
   padding: 0;
 
   width: 100%;
-  height: 100;
+  height: 100%;
 
-  grid-template-rows: 100vh 60px 1fr 200px;
+  grid-template-rows: 55vw 1fr 200px;
 
   grid-template-areas:
     "main-banner"
-    "nav-bar"
     "main-content"
     "bottom-bar";
 

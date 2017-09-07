@@ -15,43 +15,73 @@
 {% endblock %}
 
 
-{% block navbar %}
-{% include "navbar.html" %}
-{% endblock %}
-
-
 {% block container %}
 <div id="main-content">
-  <div class="main-content-item">
+  <div id="service-cards-container" class="main-content-item">
     <!-- TM -->
-    <div>
-      <p>Taiwanese Service</p>
+    <div id="tm-card" class="service-cards">
+      <p class="service-titles">Taiwanese Service</p>
       <p>9:30 AM</p>
       <p>@SFCC</p>
     </div>
 
     <!-- EM -->
-    <div>
-      <p>English Service</p>
+    <div id="em-card"  class="service-cards">
+      <p class="service-titles">English Service</p>
       <p>11:00 AM</p>
-      <p>@SFCC</p>
+      <p>@BLC</p>
     </div>
 
     <!-- MM -->
-    <div>
-      <p>Mandarin Service</p>
+    <div id="mm-card" class="service-cards">
+      <p class="service-titles">Mandarin Service</p>
       <p>11:15 AM</p>
-      <p>@BLC</p>
+      <p>@SFCC</p>
     </div>
   </div>
 
-  <a id="instagram-link" href="https://www.instagram.com/formosanchurch/">
+  <div class="main-content-item">
+    <div class="main-content-item-label">
+      Latest Sermons
+    </div>
+
+    <!-- TM -->
+    <div class="recording-cards">
+      TMrec
+      <a href="#">
+        Download
+      </a>
+    </div>
+
+    <!-- EM -->
+    <div class="recording-cards">
+      EMrec
+      <a href="#">
+        Download
+      </a>
+    </div>
+
+    <!-- MM -->
+    <div class="recording-cards">
+      MMrec
+      <a href="#">
+        Download
+      </a>
+    </div>
+  </div>
+
+<!--   <a id="instagram-link" href="https://www.instagram.com/formosanchurch/">
     <img class="main-content-image" src="{% static "images/instagramfollow.jpg" %}" />
-  </a>
+  </a> -->
 </div>
 {% endblock %}
 
 
 {% block bottombar %}
 {% include "bottombar.html" %}
+{% endblock %}
+
+
+{% block navbar %}
+{% include "navbar.html" %}
 {% endblock %}

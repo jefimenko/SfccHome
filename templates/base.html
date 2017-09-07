@@ -21,19 +21,22 @@
   {% endblock %}
 </head>
 
-<body id="body-grid">
+<body>
+  <div id="main-grid">
   {% spaceless %}
 
   {% block mainbanner %}
-  {% endblock %}
-
-  {% block navbar %}
   {% endblock %}
 
   {% block container %}
   {% endblock %}
 
   {% block bottombar %}
+  {% endblock %}
+
+  </div>
+
+  {% block navbar %}
   {% endblock %}
 
   {% endspaceless %}
