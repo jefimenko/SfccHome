@@ -7,14 +7,13 @@
   width: 100%;
   height: 100;
 
-  grid-template-columns: 1fr 5fr;
-  grid-template-rows: 400px 60px 1fr 200px;
+  grid-template-rows: 100vh 60px 1fr 200px;
 
   grid-template-areas:
-    "main-banner   main-banner"
-    "nav-bar       nav-bar"
-    "main-content  main-content"
-    "bottom-bar    bottom-bar";
+    "main-banner"
+    "nav-bar"
+    "main-content"
+    "bottom-bar";
 
   font-family: "Source Sans Pro";
 }
