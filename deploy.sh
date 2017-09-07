@@ -24,7 +24,7 @@ LOCAL_USER=$(whoami)
 sudo chown -R $LOCAL_USER:$LOCAL_USER /var/www/sfcc
 
 python manage.py collectstatic
-gsutil rsync -R /var/www/sfcc/home/static/ gs://sfcc-home-static/
+gsutil rsync -R /var/www/sfcc/home/static/ gs://sfcc-home/static
 
 
 if [[ $1 == 'l' ]]
