@@ -20,7 +20,7 @@
 .nav-bar-blocks {
   display: inline-block;
 
-  width: 100%;
+  width: calc(100% - 1px);
   height: 20px;
 
   padding: 20px 0;
@@ -30,7 +30,13 @@
 }
 
 .nav-bar-blocks:last-child {
+  width: calc(100% - 2px);
+
   border-right: 1px solid #555;
+}
+
+.nav-bar-blocks a {
+  text-decoration: none;
 }
 
 .nav-sub-menus {
